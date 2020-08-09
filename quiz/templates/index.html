@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+<h1>XYZ SCHOOL QUIZ COMPETITION</h1>
+<p>Registered students can attend this quiz</p>
+<p>Teachers should register student name in database with username and password using createsuperuser</p>
+{% if user.is_authenticated %}
+    <p>STUDENT NAME- {{user.username}}</p>
+    
+{% endif %}
+</div>
+    
+{% endblock  %}
